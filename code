@@ -1,1 +1,435 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+#include<dos.h>
+#include<iostream.h>
 
+int main(){
+	char ans;
+	int gr =DETECT,gm,input;
+	initgraph(&gr,&gm,"C:\\TURBOC3\\BGI");
+	int day,month;
+	do{
+			    clrscr();
+			    cleardevice();
+			    fflush(stdin);
+
+			    setcolor(GREEN);
+	outtextxy(1,15," Please enter your birth month in numerical:");
+	 cout<<"\n\n";
+	cin>>month;
+	if( month >12 || month <1){
+		cout<<"\t WRONG INPUT ENTERED !!!!!!!!!!!!";
+		delay(1000);
+		closegraph();
+
+	    }
+
+	setcolor(BLUE);
+	outtextxy(1,60," Please enter your birth day in numerical :" );
+	    cout<<"\n\n";
+		cin>>day;
+	if 		(
+			(month==1 && ( day <1 || day>31))||
+			(month==2 && (day <1 || day>29)) ||
+			(month==3 && (day <1 || day>31)) ||
+			(month==4 && (day <1 || day>30)) ||
+			(month==5 && (day <1 || day>31)) ||
+			(month==6 && (day <1 || day>30)) ||
+			(month==7 && (day <1 || day>31)) ||
+			(month==8 && (day <1 || day>31)) ||
+			(month==9 && (day <1 || day>30)) ||
+			(month==10&& (day <1 || day>31)) ||
+			(month==11&& (day <1 || day>30)) ||
+			(month==12&& (day <1 || day>31)) 
+			)
+{
+		cout<<"\t WRONG INPUT ENTERED !!!!!!!!!!!!";
+		delay(1000);
+		closegraph();
+
+	    }
+
+	// -------------------------    ARIES- March 21 - April 20 ----------------------  //
+
+	if((month == 3 && day >= 21 && day <=31)||(month==4 && day <= 20 && day <=30))    {
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+
+outtextxy(5,380,"Your Zodiac Sign : Aries !");
+outtextxy(300,380,"Your Birth Stone : Bloodstone !");
+				     arc (120,250,0,70,150);
+					 line(270,250,270,320);
+					 arc(171,160,90,180,50);
+					 arc(420,250,110,180,150);
+					 arc(368,160,0,90,50);
+		             delay(120);
+
+if (color==15)        {
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+  outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+
+		       }
+				    }
+	  }
+
+          //   ---------------------   TAURUS   April 21 – May 21  -----------------------   //
+
+ else if((month == 4 && day >= 21&& day <=30)||(month==5 && day <= 21 && day <=31))
+           {
+              
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Taurus!");
+					outtextxy(300,380,"Your Birth Stone : Sapphire !");
+					circle(250,250,70);
+					arc(260,130,270,0,50);
+					arc(240,130,180,270,50);
+					arc(140,130,0,90,50);
+					arc(360,130,90,180,50);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+  outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+
+
+
+           }
+
+           //    --------------------    GEMINI- May 22 – June 21    ---------------------  //
+
+        else if((month == 5 && day >= 22&& day <=31)||(month==6 && day <= 21&& day <=30))
+           {
+              
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Gemini! ");
+					outtextxy(300,380,"Your Birth Stone : Agate!");
+					arc(250,120,220,320,100);
+					arc(250,400,40,140,100);
+					line(230,300,230,220);
+					line(270,300,270,220);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+                       } 
+                                    }
+
+           }
+     
+            //       ---------------------------    CANCER June 22 – July 22   ---------------         //
+
+        else if((month == 6 && day >= 22&& day <=30)||(month==7 && day <= 22&& day <=31))
+           {
+              
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Cancer!");
+					outtextxy(300,380,"Your Birth Stone : Emerald !");
+					arc(250,120,240,300,150);
+					circle(315,237,15);
+					arc(250,300,60,120,150);
+					circle(185,183,15);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+              
+           }
+
+         //       -----------------------    LEO  July 23 – August 23   --------------------------    //
+
+	else if((month == 7&& day >= 23&& day <=31)||(month==8 && day <= 23&& day <=31))
+           {          
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Leo!");
+					outtextxy(300,380,"Your Birth Stone : Onyx !");
+					circle(300,230,35);
+					arc(522,220,157,175,200);
+					arc(352,156,45,135,20);
+					arc(175,200,340,17,200);
+					arc(384,290,135,330,30);
+					delay(120);
+
+if (color==15)        {
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+
+
+           }
+
+       //     ------------------------   VIRGO  August 24 – September 22  ---------------------    //
+
+        else if((month == 8&& day >= 24&& day <=31)||(month==9 && day <= 22)&& day <=30)
+           {
+              
+
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Virgo!");
+					outtextxy(300,380,"Your Birth Stone : Carnelion !");
+					arc(194,190,0,90,17);
+					arc(240,200,20,160,30);
+					arc(298,200,20,160,30);
+					line(212,190,212,270);
+					line(269,190,269,270);
+					line(326,190,326,270);
+					arc(527,250,165,205,200);
+					arc(183,254,320,20,160);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+  outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+
+
+
+           }
+
+       //   -----------------   LIBRA   September 23 – October 23 ----------------------  //
+
+        else if((month == 9&& day >= 23 && day <=30)||(month==10 && day <= 23 && day <=31))
+           {
+              
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Libra!");
+					outtextxy(300,380,"Your Birth Stone : Peridot !");
+					arc(300,265,0,180,40);
+					line(200,268,260,268);
+					line(340,268,400,268);
+					line(200,300,400,300);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+
+           }
+
+           //      ------------------------     SCORPIO   October 24 – November 22 -----------------------    //
+
+        else if((month == 10&& day >= 24 && day <=31)||(month==11 && day <= 22 && day <=30))
+           {
+              
+
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Scorpio!");
+					outtextxy(300,380,"Your Birth Stone : Aquamarine !");
+					arc(194,190,0,90,17);
+					arc(240,200,20,160,30);
+					arc(298,200,20,160,30);
+					line(212,190,212,270);
+					line(269,190,269,270);
+					line(326,190,326,270);
+					arc(377,270,180,240,50);
+					line(352,325,352,305);
+					line(352,305,360,315);
+					line(352,325,360,315);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+                       } 
+                                    }
+
+
+           }
+
+
+           //   --------------------     SAGGITARIUS   November 23 – December 21  --------------------    //
+
+        else if((month == 11&& day >= 23 && day <=30)||(month==12 && day <= 21 && day <=31))
+           {
+              
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Saggitarius!");
+					outtextxy(300,380,"Your Birth Stone : Topaz !");
+					line(160,300,320,200);
+					line(180,265,205,290);
+					line(320,200,290,205);
+					line(320,200,310,230);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+
+
+
+           }
+
+           //    ----------------------     CAPRICON   December 22 – January 20  ---------------------    //
+
+        else if((month == 12&& day >= 22 && day <=31)||(month==1 && day <= 20 && day <=31))
+           {             
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Capricorn!");
+					outtextxy(300,380,"Your Birth Stone : Ruby !");
+					arc(160,156,0,60,27);
+					arc(240,200,40,140,70);
+					line(187,155,187,270);
+					line(295,155,295,270);
+					ellipse(314,265,0,360,20,15);
+					arc(265,270,270,0,30);
+                    delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+                       } 
+                                    }
+           }
+
+           //    -----------------------      AQUARIUS  January 21 – February 18  ----------------------    //
+
+        else if((month == 1&& day >= 21 && day <=31)||(month==2 && day <= 18 && day <=29))
+           {
+              
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Aquarius!");
+					outtextxy(300,380,"Your Birth Stone : Garnet !");
+					line(100,250,150,220);
+					line(150,220,170,250);
+					line(170,250,220,220);
+					line(220,220,240,250);
+					line(240,250,290,220);
+					line(290,220,310,250);
+
+					line(100,330,150,300);
+					line(150,300,170,330);
+					line(170,330,220,300);
+					line(220,300,240,330);
+					line(240,330,290,300);
+					line(290,300,310,330);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+
+                       } 
+                                    }
+
+           }
+
+           //     ---------------------    PISCES February 19 - March 20    ---------------------------     //
+
+        else if((month == 2&& day >= 19 && day <=29)||(month==3 && day <= 20&& day <=31))
+           {    
+	for(int color = 1;color<16;color++){
+	setcolor(color);
+					outtextxy(5,380,"Your Zodiac Sign : Pisces!");
+					outtextxy(300,380,"Your Birth Stone : Amethyst !");
+					arc(120,250,300,60,100);
+					arc(390,250,120,240,100);
+					line(190,250,320,250);
+					delay(120);
+
+if (color==15)        {
+
+setcolor(GREEN);
+  outtextxy (1,410,"Please Type y or Y to Find Another Horoscope  ");
+  setcolor(RED);
+   outtextxy (1,430,"Please Type any Other Key to Exit  ");
+  cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t";
+	cin >> ans;
+                       } 
+
+                  }
+
+            }
+           
+
+
+
+}
+ while(ans == 'y' || ans == 'Y');
+closegraph();
+}
+             
+
+
+ 
